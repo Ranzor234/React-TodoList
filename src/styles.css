@@ -1,4 +1,150 @@
-.App {
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-red-color: #e06262;
+  --main-black-color: #2d2d2d;
+  --main-orange-color: #fad390;
+}
+
+.main-black-color {
+  color: var(--main-black-color);
+}
+
+.main-red-color {
+  color: var(--main-red-color);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  background-color: var(--main-black-color);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 450px;
+  width: 300px;
+  background-color: var(--main-orange-color);
+  border-radius: 5px;
+  padding: 18px;
+}
+
+.frame {
+  border: 1px solid var(--main-black-color);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: 1;
   text-align: center;
+  text-transform: lowercase;
+  font-size: 2.1rem;
+  margin-top: 50px;
+  font-family: "Homemade Apple";
+}
+
+.header-btn {
+  font-size: 1.4rem;
+  outline: unset;
+  background-color: unset;
+  border: unset;
+  font-family: "Bungee";
+  padding: 8px;
+  cursor: pointer;
+}
+
+.header-btn.main-red-color:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.header-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.add {
+  padding: 12px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  border: unset;
+  background: unset;
+  padding: 0 12px;
+
+  flex: 1;
+
+  border-bottom: solid 1px var(--main-red-color);
+  outline: unset;
+
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.add-btn {
+  background: unset;
+  outline: unset;
+  border: unset;
+
+  font-size: 1.4rem;
+  font-family: "Bungee";
+
+  padding: 4px;
+  padding-right: unset;
+  cursor: pointer;
+}
+
+.add-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 20px;
+  margin: 16px 0 0;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 14px;
+
+  border-bottom: solid 1px var(--main-red-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 51%;
+  transform: translate(-50%);
 }
