@@ -11,10 +11,16 @@ const TodoList = () => {
     { text: "Learn Javascript" }
   ]);
 
+  const addTodo = value => {
+    const addedTodo = [...todos, { text: value }];
+
+    setTodos(addedTodo);
+  };
+
   return (
     <Paper>
       <Header />
-      <TodoFrom />
+      <TodoFrom addTodo={addTodo} />
       <Todos todos={todos} />
     </Paper>
   );
