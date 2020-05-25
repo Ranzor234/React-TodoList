@@ -127,6 +127,8 @@ html {
 .todos {
   display: flex;
   flex-direction: column;
+
+  min-height: 400px;
 }
 
 .todo {
@@ -135,7 +137,7 @@ html {
   flex: 1 0 auto;
   text-align: center;
 
-  min-height: 20px;
+  max-height: 23px;
   margin: 16px 0 0;
   font-family: "Homemade Apple", sans-serif;
   font-size: 14px;
@@ -144,6 +146,8 @@ html {
 }
 
 .todo-text {
+  height: 30px;
+  width: 100%;
   position: absolute;
   left: 51%;
   transform: translate(-50%);
