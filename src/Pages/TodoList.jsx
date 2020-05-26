@@ -11,16 +11,20 @@ const TodoList = () => {
     { text: "Learn Javascript" }
   ]);
 
+  const [showAdd, setShowAdd] = useState(false);
+
   const addTodo = value => {
     const addedTodo = [...todos, { text: value }];
 
     setTodos(addedTodo);
   };
 
+  const setShowAddToggle = () => setShowAdd(!showAdd);
+
   return (
     <Paper>
-      <Header />
-      <TodoFrom addTodo={addTodo} />
+      <Header ShowAddToggle={setShowAddToggle} showAdd={showAdd} />
+      <TodoFrom addTodo={addTodo} showAdd={showAdd} />
       <Todos todos={todos} />
     </Paper>
   );
