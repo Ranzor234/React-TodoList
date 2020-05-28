@@ -152,3 +152,13 @@ html {
   left: 51%;
   transform: translate(-50%);
 }
+
+.add-placeholder {
+  text-align: center;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 14px;
+}
+
+.add-placeholder-button {
+  font-family: "Bungee";
+}
