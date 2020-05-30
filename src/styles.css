@@ -16,6 +16,14 @@
   color: var(--main-red-color);
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 html {
   font-size: 10px;
 }
@@ -37,7 +45,7 @@ html {
 
 .container {
   height: 450px;
-  width: 300px;
+  width: 380px;
   background-color: var(--main-orange-color);
   border-radius: 5px;
   padding: 18px;
@@ -58,21 +66,23 @@ html {
 }
 
 .header-title {
-  flex: 1;
+  /* flex: 1; */
+  width: 52%;
   text-align: center;
+
   text-transform: lowercase;
-  font-size: 2.1rem;
-  margin-top: 50px;
+  font-size: 2.2rem;
+  margin-top: 30px;
   font-family: "Homemade Apple";
 }
 
 .header-btn {
+  width: 24%;
   font-size: 1.4rem;
   outline: unset;
   background-color: unset;
   border: unset;
   font-family: "Bungee";
-  padding: 4px;
   cursor: pointer;
 }
 
