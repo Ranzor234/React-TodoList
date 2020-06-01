@@ -27,40 +27,7 @@ html {
   padding: 0;
 }
 
-.container {
-  height: 450px;
-  width: 380px;
-  background-color: var(--main-orange-color);
-  border-radius: 5px;
-  padding: 18px;
-}
-
-.frame {
-  border: 1px solid var(--main-black-color);
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.header {
-  display: flex;
-  align-items: flex-start;
-}
-
-.header-title {
-  /* flex: 1; */
-  width: 52%;
-  text-align: center;
-
-  text-transform: lowercase;
-  font-size: 2.2rem;
-  margin-top: 30px;
-  font-family: "Homemade Apple";
-}
-
-.add {
+/* .add {
   padding: 12px;
 }
 
@@ -99,7 +66,7 @@ html {
 
 .add-btn.main-black-color:active {
   text-shadow: 1px 1px 2px var(--main-black-color);
-}
+} */
 .todos {
   display: flex;
   flex-direction: column;
@@ -107,7 +74,7 @@ html {
   min-height: 500px;
 }
 
-.todo {
+/* .todo {
   position: relative;
 
   flex: 1 0 auto;
@@ -137,4 +104,4 @@ html {
 
 .add-placeholder-button {
   font-family: "Bungee";
-}
+} */

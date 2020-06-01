@@ -1,0 +1,16 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 500px;
+}
+
+.addPlaceholder {
+  text-align: center;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 14px;
+}
+
+.addPlaceholderButton {
+  font-family: "Bungee";
+}

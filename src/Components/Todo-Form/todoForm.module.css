@@ -1,0 +1,40 @@
+.add {
+  padding: 12px;
+}
+
+.addForm {
+  display: flex;
+  align-items: flex-start;
+}
+
+.addInput {
+  border: unset;
+  background: unset;
+  padding: 0 12px;
+
+  flex: 1;
+
+  border-bottom: solid 1px var(--main-red-color);
+  outline: unset;
+
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.addBtn {
+  background: unset;
+  outline: unset;
+  border: unset;
+
+  font-size: 1.4rem;
+  font-family: "Bungee";
+
+  padding: 2px;
+  padding-right: unset;
+  cursor: pointer;
+}
+
+.addBtn:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
