@@ -3,6 +3,7 @@
 // import React from "react";
 import { jsx } from "@emotion/core";
 import PropTypes from "prop-types";
+import { useTheme } from "emotion-theming";
 
 import Button from "../Button/Button";
 
@@ -13,6 +14,8 @@ import Button from "../Button/Button";
 import * as styles from "./Header-Styles";
 
 const Header = ({ ShowAddToggle, showAdd, clearTodos }) => {
+  const theme = useTheme();
+
   return (
     <section css={styles.header}>
       <Button
@@ -20,7 +23,7 @@ const Header = ({ ShowAddToggle, showAdd, clearTodos }) => {
         onClick={ShowAddToggle}
         align="left"
       />
-      <h1 css={styles.headerTitle}>Todo List</h1>
+      <h1 css={styles.headerTitle(theme)}>Todo List</h1>
       <Button text="Clear" onClick={clearTodos} color="red" align="right" />
     </section>
   );

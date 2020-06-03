@@ -7,11 +7,11 @@ export const header = () => {
   `;
 };
 
-export const headerTitle = () => {
+export const headerTitle = theme => {
   return css`
     width: 52%;
     text-align: center;
-
+    color: ${theme.color.primary.black};
     text-transform: lowercase;
     font-size: 2.2rem;
     margin-top: 30px;
