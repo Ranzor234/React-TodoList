@@ -28,9 +28,9 @@ const Todos = ({ todos, completeTodo }) => {
           );
         })}
       {todos.length === 0 && (
-        <div css={styles.addPlaceholder}>
+        <div css={styles.addPlaceHolder}>
           Add Todo by Clicking {""}
-          <span css={styles.addPlaceholderButton}>Add</span> Button On The Left
+          <span css={styles.addPlaceHolderButton}>Add</span> Button On The Left
           Corner
         </div>
       )}
