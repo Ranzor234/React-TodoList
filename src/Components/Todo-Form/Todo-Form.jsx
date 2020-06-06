@@ -4,6 +4,10 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import PropTypes from "prop-types";
 
+import Button from "../Button/Button";
+import Container from "../../Layout/Container";
+import Item from "../../Layout/Item";
+
 import { useTheme } from "emotion-theming";
 // Module Css
 // import styles from "./todoForm.module.css";
@@ -36,16 +40,22 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
   if (showAdd) {
     return (
-      <section css={styles.add}>
-        <form css={styles.addForm} onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            css={styles.addInput(theme)}
-            value={value}
-            onChange={e => setValue(e.target.value)}
-          />
-          <button css={styles.addBtn(theme)}>Add </button>
-        </form>
+      <section className="todoForm-Component">
+        <form css={styles.addForm} onSubmit={handleFormSubmit} />
+        <Container alignItems="flex-start">
+          <Item flex={1} padding="9px 0px 0px 12px">
+            <input
+              type="text"
+              css={styles.addInput(theme)}
+              value={value}
+              onChange={e => setValue(e.target.value)}
+            />
+          </Item>
+          <Item>
+            {/* <button css={styles.addBtn(theme)}>Add </button> */}
+            <Button text="Add" color="black" />
+          </Item>
+        </Container>
       </section>
     );
   } else {

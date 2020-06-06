@@ -6,6 +6,8 @@ import { jsx } from "@emotion/core";
 
 import Todo from "../Todo/Todo.jsx";
 
+import Container from "../../Layout/Container";
+
 // Module Css
 // import styles from "./Todos.module.css";
 
@@ -14,26 +16,28 @@ import * as styles from "./Todos.Styles";
 
 const Todos = ({ todos, completeTodo }) => {
   return (
-    <section css={styles.todos}>
-      {todos.length > 0 &&
-        todos.map((todo, index) => {
-          return (
-            <Todo
-              key={index}
-              text={todo.text}
-              isCompleted={todo.isCompleted}
-              completeTodo={completeTodo}
-              index={index}
-            />
-          );
-        })}
-      {todos.length === 0 && (
-        <div css={styles.addPlaceHolder}>
-          Add Todo by Clicking {""}
-          <span css={styles.addPlaceHolderButton}>Add</span> Button On The Left
-          Corner
-        </div>
-      )}
+    <section className="todos-component">
+      <Container flexDirection="column" minHeight="500px">
+        {todos.length > 0 &&
+          todos.map((todo, index) => {
+            return (
+              <Todo
+                key={index}
+                text={todo.text}
+                isCompleted={todo.isCompleted}
+                completeTodo={completeTodo}
+                index={index}
+              />
+            );
+          })}
+        {todos.length === 0 && (
+          <div css={styles.addPlaceHolder}>
+            Add Todo by Clicking {""}
+            <span css={styles.addPlaceHolderButton}>Add</span> Button On The
+            Left Corner
+          </div>
+        )}
+      </Container>
     </section>
   );
 };
